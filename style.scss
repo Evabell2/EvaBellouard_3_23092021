@@ -2,18 +2,251 @@
     $couleur_primaire: #9356DC;
     $couleur_secondaire: #FF79DA;
     $couleur_tertiaire: #99E2D0;
-
     $couleur_nav: #DEDEDE;
     $couleur_background: #F3F3F3;
-    $couleur-footer: #5F5F5F;
+    $couleur-footer: #414141;
     body {
+        margin: 0;
         font-family: 'roboto';
+        background: $couleur_background;
     }
     h1, h2 {
         font-family: 'shrikhand';
+        line-height: 1;
+    }
+    h4 {
+        font-size: 23px;
+        margin: 2% 0;
+        color: black;
+    }
+    a {
+        text-decoration: none;
+    }
+    p {
+        color: black;
     }
 //#endregion global
 
 //#region page d'accueil
-
+    nav {
+        padding: 3%;
+        text-align: center;
+        background: white;
+        img {
+            max-width: 100%;
+            width: 50%;
+        }
+    }
+    header {
+        text-align: center;
+        .localisation {
+            background: $couleur_nav;
+            input {
+                &::before {
+                    content: "\f007";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900; 
+                }
+                padding: 15px 0;
+                border: none;
+                font-weight: bold;
+                text-align: center;
+                font-size: 18px;
+                background: $couleur_nav;
+            }
+        }
+        .txt_header {
+            padding: 5% 12% 10% 12%;
+            h1 {
+                margin-bottom: 4%;
+            }
+            p {
+                margin: 0 0 10% 0;
+                font-size: 20px;
+                opacity: 0.8;;
+            }
+            button {
+                padding: 5% 6%;
+                border: transparent;
+                border-radius: 25px;
+                background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+    #fonctionnement {
+        padding: 10%;
+        background: white;
+        h3 {
+            &::before {
+                content: '1';
+                position: absolute;
+                left: -15px;
+                padding: 7px 12px;
+                border-radius: 50%;
+                background: $couleur_primaire;
+                color: white;
+                font-size: 15px;
+            }
+            position: relative;
+            padding: 7% 5%;
+            text-align: center;
+            background: $couleur_background;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            &:nth-of-type(2) {
+                &::before {
+                    content: '2';
+                }
+            }
+            &:nth-of-type(3) {
+                &::before {
+                    content: '3';
+                }
+            }
+        }
+    }
+    #restaurants {
+        padding: 5% 3% 10%;
+        article {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 45vh;
+            margin: 5% 0;
+            border-radius: 20px;
+            background-size: cover !important;
+            background-position-y: -90px !important;
+            &:nth-of-type(1) {
+                background: url("./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
+            }
+            &:nth-of-type(2) {
+                background: url("./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat;
+            }
+            &:nth-of-type(3) {
+                background: url("./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat;
+            }
+            &:nth-of-type(4) {
+                background: url("./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 5%;
+                padding: 10px 20px;
+                background: $couleur_tertiaire;
+                border: none;
+                border-radius: 5px;
+                color: #298178;
+                font-weight: bold;
+            }
+            .nom_restaurant {
+                padding: 3%;
+                background: white;
+                border-radius: 0 0 20px 20px;
+                h4 {
+                    margin-bottom: 0;
+                }
+                p {
+                    margin: 0;
+                    padding: 2% 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    footer {
+        padding: 5%;
+        background: $couleur-footer;
+        color: white;
+        img {
+            max-width: 100%;
+            width: 30%;
+        }
+        ul {
+            list-style: none;
+            line-height: 1.5;
+            padding-left: 0;
+            font-size: 20px;
+        }
+    }
 //#endregion page d'acceuil
+
+//#region pages internes
+    .header_pages_internes {
+        position: relative;
+        display: flex;
+        img {
+            width: 100%;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            height: 40px;
+            background: $couleur_background;
+            border-radius: 40px 40px 0 0;
+        }
+    }
+    .menu_du_restaurant {
+        padding: 0 5% 5% 5%;
+        h2 {
+            margin: 0 0 10% 2%;
+            font-style: italic;
+        }
+        article {
+            h3 {
+                margin-left: 2%;
+                text-transform: uppercase;
+                font-weight: normal;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 50px;
+                    padding-top: 5px;
+                    border-bottom: 3px solid $couleur_tertiaire;
+                }
+            }
+            .plat_menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin: 4% 0;
+                padding: 2% 5%;
+                background: white;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                .intitule {
+                    padding-right: 10px;
+                    h4 {
+                        font-size: 20px;
+                    }
+                    p {
+                        margin: 2% 0;
+                    }
+                }
+                & > p {
+                    font-weight: bold;
+                }
+            }
+            &:nth-of-type(2) {
+                margin: 10% 0;
+            }
+        }
+        button {
+            display: flex;
+            margin: 10% auto;
+            padding: 4% 12%;
+            border: transparent;
+            border-radius: 25px;
+            background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+            color: white;
+            font-size: 18px;
+        }
+    }
+//#endregion pages internes
+

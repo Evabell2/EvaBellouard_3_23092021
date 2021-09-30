@@ -1,8 +1,299 @@
 body {
+  margin: 0;
   font-family: 'roboto';
+  background: #F3F3F3;
 }
 
 h1, h2 {
   font-family: 'shrikhand';
+  line-height: 1;
+}
+
+h4 {
+  font-size: 23px;
+  margin: 2% 0;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: black;
+}
+
+nav {
+  padding: 3%;
+  text-align: center;
+  background: white;
+}
+
+nav img {
+  max-width: 100%;
+  width: 50%;
+}
+
+header {
+  text-align: center;
+}
+
+header .localisation {
+  background: #DEDEDE;
+}
+
+header .localisation input {
+  padding: 15px 0;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  background: #DEDEDE;
+}
+
+header .localisation input::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+header .txt_header {
+  padding: 5% 12% 10% 12%;
+}
+
+header .txt_header h1 {
+  margin-bottom: 4%;
+}
+
+header .txt_header p {
+  margin: 0 0 10% 0;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+header .txt_header button {
+  padding: 5% 6%;
+  border: transparent;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  font-size: 18px;
+}
+
+#fonctionnement {
+  padding: 10%;
+  background: white;
+}
+
+#fonctionnement h3 {
+  position: relative;
+  padding: 7% 5%;
+  text-align: center;
+  background: #F3F3F3;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#fonctionnement h3::before {
+  content: '1';
+  position: absolute;
+  left: -15px;
+  padding: 7px 12px;
+  border-radius: 50%;
+  background: #9356DC;
+  color: white;
+  font-size: 15px;
+}
+
+#fonctionnement h3:nth-of-type(2)::before {
+  content: '2';
+}
+
+#fonctionnement h3:nth-of-type(3)::before {
+  content: '3';
+}
+
+#restaurants {
+  padding: 5% 3% 10%;
+}
+
+#restaurants article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 45vh;
+  margin: 5% 0;
+  border-radius: 20px;
+  background-size: cover !important;
+  background-position-y: -90px !important;
+}
+
+#restaurants article:nth-of-type(1) {
+  background: url("./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
+}
+
+#restaurants article:nth-of-type(2) {
+  background: url("./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat;
+}
+
+#restaurants article:nth-of-type(3) {
+  background: url("./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat;
+}
+
+#restaurants article:nth-of-type(4) {
+  background: url("./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
+}
+
+#restaurants article button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5%;
+  padding: 10px 20px;
+  background: #99E2D0;
+  border: none;
+  border-radius: 5px;
+  color: #298178;
+  font-weight: bold;
+}
+
+#restaurants article .nom_restaurant {
+  padding: 3%;
+  background: white;
+  border-radius: 0 0 20px 20px;
+}
+
+#restaurants article .nom_restaurant h4 {
+  margin-bottom: 0;
+}
+
+#restaurants article .nom_restaurant p {
+  margin: 0;
+  padding: 2% 0;
+  font-size: 20px;
+}
+
+footer {
+  padding: 5%;
+  background: #414141;
+  color: white;
+}
+
+footer img {
+  max-width: 100%;
+  width: 30%;
+}
+
+footer ul {
+  list-style: none;
+  line-height: 1.5;
+  padding-left: 0;
+  font-size: 20px;
+}
+
+.header_pages_internes {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_pages_internes img {
+  width: 100%;
+}
+
+.header_pages_internes::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 40px;
+  background: #F3F3F3;
+  border-radius: 40px 40px 0 0;
+}
+
+.menu_du_restaurant {
+  padding: 0 5% 5% 5%;
+}
+
+.menu_du_restaurant h2 {
+  margin: 0 0 10% 2%;
+  font-style: italic;
+}
+
+.menu_du_restaurant article h3 {
+  margin-left: 2%;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.menu_du_restaurant article h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  padding-top: 5px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.menu_du_restaurant article .plat_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 4% 0;
+  padding: 2% 5%;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.menu_du_restaurant article .plat_menu .intitule {
+  padding-right: 10px;
+}
+
+.menu_du_restaurant article .plat_menu .intitule h4 {
+  font-size: 20px;
+}
+
+.menu_du_restaurant article .plat_menu .intitule p {
+  margin: 2% 0;
+}
+
+.menu_du_restaurant article .plat_menu > p {
+  font-weight: bold;
+}
+
+.menu_du_restaurant article:nth-of-type(2) {
+  margin: 10% 0;
+}
+
+.menu_du_restaurant button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10% auto;
+  padding: 4% 12%;
+  border: transparent;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
